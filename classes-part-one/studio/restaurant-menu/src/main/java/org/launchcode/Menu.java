@@ -1,30 +1,21 @@
-package org.launchcode;
-
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Menu {
+    private List<MenuItem> menuItems;
     private Date lastUpdated;
-    private ArrayList<MenuItem> items;
 
-    public Menu(Date d, ArrayList<MenuItem> i) {
-        this.lastUpdated = d;
-        this.items = i;
+    public Menu() {
+        menuItems = new ArrayList<>();
+        lastUpdated = new Date(); // Initialize with the current date
     }
 
-    public void setLastUpdated(Date lastUpdated) {
-        this.lastUpdated = lastUpdated;
-    }
-
-    public void setItems(ArrayList<MenuItem> items) {
-        this.items = items;
+    public List<MenuItem> getMenuItems() {
+        return menuItems;
     }
 
     public Date getLastUpdated() {
         return lastUpdated;
-    }
-
-    public ArrayList<MenuItem> getItems() {
-        return items;
     }
 }
